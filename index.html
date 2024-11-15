@@ -5,21 +5,18 @@
     <title>Project 3 Page</title>
     <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#resume">Resume</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
 
-    <section class="centered-container">
+    <div class="centered-container">
         <h1>Welcome to my page!</h1>
 
         <img src="media/homephoto.jpg" alt="Chicago nightlife from the Willis Tower">
@@ -41,28 +38,14 @@
         <section>
             <p>I hope you enjoy exploring my page to learn some interesting facts about me!</p>
         </section>
-    </section>
+    </div>
 
     <footer>
         Contact Information: abeacham@hawk.iit.edu<br>
         &copy; <span id="current-year"></span>
     </footer>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-       
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
