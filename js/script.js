@@ -1,16 +1,13 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href').substring(1); 
-    const targetElement = document.getElementById(targetId); 
-
-    if (targetElement) {
-      e.preventDefault();
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
 document.getElementById('current-year').textContent = new Date().getFullYear();
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        const countSpan = this.querySelector('.click-count');
+        if (countSpan) {
+            let count = parseInt(countSpan.textContent, 10) || 0;
+            count++;
+            countSpan.textContent = count;
+        }
+    });
+});
