@@ -2,32 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"> 
-    <title>Project 3 Page</title>
+    <title>Project 3 Page - Hobbies</title>
     <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="videoprofile.html">Resume</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="videoprofile.html">Resume</a></li>
+        </ul>
+    </nav>
 
     <section class="centered-container">
         <h1>HOBBIES PAGE</h1>
 
         <section>
-            <h2><strong>Content Creation</strong></h2> 
-            <img src="media/tiktokpage.png" alt="Current screenshot of my Tiktok page.">
+            <h2><strong>Content Creation</strong></h2>
+            <img src="media/tiktokpage.png" alt="Current screenshot of my Tiktok page." style="max-width: 100%; height: auto;">
             <p>One thing I have always been interested in is content creation. One year ago, I decided to post on Tiktok.</p>
             <p>Creating videos is something that I have been doing for years. Learning the different effects from music videos first piqued my interest.</p>
             <p>Eventually, I decided to start my own page. My content is mainly sports videos using some of my favorite songs ever.</p>
         </section>
 
         <section>
-            <h2><strong>Vinyls</strong></h2> 
-            <img src="media/vinylspic.png" alt="A record store selling retro vinyls labeled in alphabetical order.">
+            <h2><strong>Vinyls</strong></h2>
+            <img src="media/vinylspic.png" alt="A record store selling retro vinyls labeled in alphabetical order." style="max-width: 100%; height: auto;">
             <p>Music has had a huge impact on my life. It's what also helped inspire me to post on Tiktok.</p>
             <p>About two years ago, videos would come across my page with people showing off vinyls they recently purchased.</p>
             <p>I took interest in the videos as it showed the different music tastes that everyone has. That's when I started collecting myself.</p>
@@ -35,10 +36,24 @@
         </section>
 
         <section>
+            <h2><strong>Video Mix</strong></h2>
             <p>This is one of my mixes that I created. The song is called "Crack Rock" by Frank Ocean. The player is Kobe Bryant.</p>
-            <iframe width="560" height="315" src="https://youtube.com/embed/EWBcI2qshds?feature=shared" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/EWBcI2qshds?feature=shared" 
+                title="Video Mix by Amare Beacham" 
+                allowfullscreen 
+                style="border: none; display: block; margin: 0 auto;">
+            </iframe>
         </section>
     </section>
 
+    <footer>
+        Contact Information: abeacham@hawk.iit.edu<br>
+        &copy; <span id="current-year"></span>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
