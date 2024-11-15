@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Project 2 Page</title>
+    <title>Project 3 Page</title>
     <link rel="stylesheet" href="css/reset.css"> 
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="videoprofile.html">Resume</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#resume">Resume</a></li>
     </ul>
 
     <section class="centered-container">
@@ -19,11 +24,13 @@
 
         <img src="media/homephoto.jpg" alt="Chicago nightlife from the Willis Tower">
 
-        <section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
             <p>Welcome to my page. My name is <strong>Amare</strong> and this photo is one of the reasons I love Chicago. The beautiful lights of the city at night.</p>
         </section>
 
-        <section>
+        <section id="resume">
+            <h2>Resume</h2>
             <p>I'm a second-year student here at Illinois Institute of Technology. I do recommend this university for others to attend.</p>
         </section>
 
@@ -37,8 +44,25 @@
     </section>
 
     <footer>
-        Contact Information: abeacham@hawk.iit.edu
+        Contact Information: abeacham@hawk.iit.edu<br>
+        &copy; <span id="current-year"></span>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
