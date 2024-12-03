@@ -115,3 +115,39 @@ footer {
     left: 20px;
     width: 200px;
 }
+
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .centered-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .centered-container img {
+        width: 80%; /* Shrink image */
+    }
+
+    .centered-container h1 {
+        font-size: 1.8rem; 
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
